@@ -8,6 +8,7 @@ public class HelloRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
+        Thread.sleep(500);
         from("coap://localhost:5683/hello")
         .setBody(simple("hello"));
     }
